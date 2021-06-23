@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>WeatherReport</title>
+</head>
+<body>
+    <p>This is the page that displays the weather-report results to the user.</p>
+
+    <h1>Results</h1>
+<p th:text="'City: ' + ${City.name}"></p>
+<p th:text="'Temperature: ' + ${Temperature.temp} + ' °F'"></p>
+</body>
+</html>

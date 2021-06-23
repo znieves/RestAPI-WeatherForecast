@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>HomePage</title>
+</head>
+<body>
+<p>This is the homepage that should display the weather form to the user.</p>
+<br>
+<br>
+
+<form action="#" th:action="@{/MyMVC/weather-forecast}" th:object="${userData}" method="post">
+    <table>
+        <tr>
+            <td>
+                Enter a City: <input type="text" th:field="*{city}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enter a State (Abbreviation): <input type="text" th:field="*{state}"/>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Get Weather Report">
+</form>
+</body>
+</html>
